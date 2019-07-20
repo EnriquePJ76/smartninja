@@ -27,8 +27,7 @@ while op != "q":
     elif op == "/":
         resultado = num1 / num2
     elif op == "q":
-        print ("Bye bye!!!")
-        exit()
+        break
     else:
         print ("No has metido una operacion correcta!!!")
 
@@ -36,3 +35,7 @@ while op != "q":
     # En esta parte imprimimos los resultaods
     print ("\nEl resultado de la operación es:")
     print (str(num1) + " " + op + " " + str(num2) + " = " + str(resultado))
+    print ("%s %s %s = %s" % (num1, op, num2, resultado))
+    print ("{0} {1} {2} = {3} -----> {3}".format(num1,op,num2,resultado))
+
+print ("Bye bye!!!")
