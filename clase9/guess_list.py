@@ -1,11 +1,16 @@
 # -*- coding: utf-8 -*-
+
+import json
+
 try:
-    with open("score.txt", "r") as score_file:
-        best_score = int(score_file.read())
-        print("Top score (attempts): " + str(best_score))
+    with open("score_list.txt", "r") as score_file:
+        score_list = json.loads(score_file.read())
+        score_list.sort()
+        print("Top scores (attempts): " + str(score_list[:3]))
 except:
     print ("No hay puntuaciones guardadas")
-    best_score = 100
+    score_list = []
+
 
 import random
 
@@ -24,10 +29,10 @@ while True:
     if guess == secret:
         print("You've guessed it - congratulations! It's number " + str(secret))
         print("Attempts needed: " + str(attempts))
-        if attempts < best_score:
-            print ("You are the champion!! save your scope")
-            with open("score.txt", "w") as score_file:
-                score_file.write(str(attempts))
+        score_list.append(attempts)
+        print ("You are the champion!! save your scope")
+        with open("score_list.txt", "w") as score_file:
+            score_file.write(json.dumps(score_list))
         break
     elif guess > secret:
         print("Your guess is not correct... try something smaller")
