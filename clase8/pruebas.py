@@ -18,3 +18,6 @@ print (t0 + " " + t1 + " " + t2)
 
 print (str(x) + " + " + str(y) + " = "+ str(suma))
 
+print ( "%s + %s + %s = %s" % (x, y, y, suma))
+
+print ( "{1} + {2} + {2} = {3}".format(x, y, suma))
