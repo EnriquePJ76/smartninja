@@ -43,14 +43,14 @@ while True:
 
 
 
+def suma(x, y):
+    s = x + y
+    return s
 
+print (suma(5,3))
 
-
-
-
-
-
-
+s = suma(3,2)
+z = suma(s, 5)
 
 
 
