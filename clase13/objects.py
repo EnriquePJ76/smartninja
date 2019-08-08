@@ -28,36 +28,39 @@ class FootballPlayer():
         self.yellow_cards = yellow_cards
         self.red_cards = red_cards
 
+print (__name__)
 
-jonhdoe = BasketballPlayer(first_name="Jonh", last_name="Doe", weight_kg=82)
+if __name__ == "__main__":
 
-lebron = BasketballPlayer(first_name="Lebron", last_name="James", height_cm=203, weight_kg=113, points=27.2, rebounds=7.4, assists=7.2)
+    jonhdoe = BasketballPlayer(first_name="Jonh", last_name="Doe", weight_kg=82)
 
-kev_dur = BasketballPlayer(first_name="Kevin", last_name="Durant", height_cm=210, weight_kg=108, points=27.2, rebounds=7.1, assists=4)
+    lebron = BasketballPlayer(first_name="Lebron", last_name="James", height_cm=203, weight_kg=113, points=27.2, rebounds=7.4, assists=7.2)
 
-print("")
+    kev_dur = BasketballPlayer(first_name="Kevin", last_name="Durant", height_cm=210, weight_kg=108, points=27.2, rebounds=7.1, assists=4)
 
-print(lebron.first_name)
-print(lebron.height_cm)
+    print("")
 
-print(kev_dur.last_name)
-print(kev_dur.rebounds)
+    print(lebron.first_name)
+    print(lebron.height_cm)
 
-# list of players
-bball_players = [lebron, kev_dur]
+    print(kev_dur.last_name)
+    print(kev_dur.rebounds)
 
-for player in bball_players:
-    print(player.last_name + ", " + player.first_name)
-    print ( player.fullname() )
+    # list of players
+    bball_players = [lebron, kev_dur]
 
-print(lebron.weight_to_lbs())
-print(kev_dur.weight_to_lbs())
+    for player in bball_players:
+        print(player.last_name + ", " + player.first_name)
+        print ( player.fullname() )
 
-ronaldo = FootballPlayer(first_name="Cristiano", last_name="Ronaldo", height_cm=184, weight_kg=79, goals=586, yellow_cards=95, red_cards=11)
+    print(lebron.weight_to_lbs())
+    print(kev_dur.weight_to_lbs())
 
-messi = FootballPlayer(first_name="Lionel", last_name="Messi", height_cm=170, weight_kg=67, goals=575, yellow_cards=67, red_cards=0)
+    ronaldo = FootballPlayer(first_name="Cristiano", last_name="Ronaldo", height_cm=184, weight_kg=79, goals=586, yellow_cards=95, red_cards=11)
 
-print(ronaldo.first_name)
-print(ronaldo.goals)
-print(messi.first_name)
-print(messi.goals)
+    messi = FootballPlayer(first_name="Lionel", last_name="Messi", height_cm=170, weight_kg=67, goals=575, yellow_cards=67, red_cards=0)
+
+    print(ronaldo.first_name)
+    print(ronaldo.goals)
+    print(messi.first_name)
+    print(messi.goals)
